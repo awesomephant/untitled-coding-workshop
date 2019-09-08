@@ -22,27 +22,15 @@
 }
 
 :root {
-    --lightgray: rgb(242, 242, 242);
-    --red: rgb(255, 135, 99);
+    --lightgray: rgb(246, 243, 238);
+    --darkgray: rgb(135, 137, 149);
+    --red: rgb(255, 125, 38);
     --font-text: 'iA Writer Quattro', 'IBM Plex Mono';
 }
 
 body {
     font-family: var(--font-text);
     padding: 1rem;
-}
-@media (min-width: 45rem){
-
-    body:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 2rem;
-        background: url('/assets/pattern.png');
-        background-size: 3px;
-    }
 }
 
 a {
@@ -71,15 +59,39 @@ a:hover, a:focus {
 }
 
 .home--nav {
-    max-width: 40rem;
+    max-width: 50rem;
     margin: 0 auto;
     text-align: center;
-    font-family: var(--font-text)
+    font-family: var(--font-text);
+    display: grid;
+}
+
+.home--nav div {
+    margin-bottom: 4rem;
+}
+
+@media(min-width: 55rem){
+    .home--nav {
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid var(--darkgray);
+        border-left: 1px solid var(--darkgray);
+        border-radius: 2px;
+    }
+    .home--nav div {
+        border-bottom: 1px solid var(--darkgray);
+        border-right: 1px solid var(--darkgray);
+        padding: 1rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 }
 
 .home--nav h3 {
     font-weight: normal;
     font-size: 1rem;
+    margin-bottom: .5rem;
 }
 
 .home--nav a {
@@ -89,6 +101,9 @@ a:hover, a:focus {
     border-bottom: 4px solid var(--red);
     text-decoration: none;
     margin-bottom: 1rem;
+    word-spacing: -.1em;
+}
+.home--nav a:hover {
 }
 
 .home--nav p {
@@ -97,10 +112,6 @@ a:hover, a:focus {
     word-spacing: -.2em;
     line-height: 1.5;
     margin: 0 auto;
-}
-
-.home--nav div {
-    margin-bottom: 4rem;
 }
 
 .article {

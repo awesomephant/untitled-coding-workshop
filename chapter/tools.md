@@ -34,4 +34,6 @@ There are dozens of HTML elements and attributes, and hundreds of CSS properties
 Some good places to find good, up to date information:
 
 - Mozilla Developer Network (MDN)
+- caniuse.com
+
 - CSS-Tricks
