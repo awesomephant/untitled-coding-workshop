@@ -6,7 +6,7 @@ title: Introduction
 intro: What's a website! 
 ---
 
-![The web is ubiquitous spot illustration](/assets/ubiquitous.png)
+![The web is ubiquitous spot illustration](/assets/Artboard-6.png)
 
 ## The web is everywhere
 
