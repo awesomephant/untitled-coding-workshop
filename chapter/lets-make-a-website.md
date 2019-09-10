@@ -21,40 +21,30 @@ date: 2019-01-03
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
 </head>
 <body>
+<p>
+    it's a website
+</p>
 </body>
 </html>
 ```
 
-Check if live reloading works. It's a website!
+Run ```npm run start``` and open the URL it gives you. Check if livereloading works.
 
 - This things between pointy brackets are called tags. Anything between them will show up on the page. 
-- Headings
-- Links
-- Article, Section, Header
-- Images, Video
+- Headings (Levels 1-6, designers already know about hierarchy so this makes sense)
+- Links (Here we introduce attributes)
+- Article, Section, Header (for semantics)
+- Images, Video, Form elements (Elements that give you functionality)
+
+At this point you only want to think about structure, not about presentation.
 
 ### Semantic Markup
 
 There's all kinds of different elements to mark common parts of a website. Some give you special functionality (such as ```<audio>``` and ```<video>```), while others give semantic information to the browser (like ```<nav>``` and ```<main>```). It's good practice to use these elements as much as you can because:
 
-- Helps people using assistive technlogy (without much extra work)
+- Helps people using assistive technology without much extra work (this includes things like RSS readers, social media cards, but also text-to-speech, and translation.)
 - Helps (I think) you think clearly about hierarchy, structure etc.
-
-## Separation of concerns
-
-Most websites are made of three different programming languages: HTML, CSS, and Javascript. Each serves a different function:
-
-- HTML describes the content of your website: Text, images, videos, links and so on.
-- CSS defines how that content looks: The layout, typesetting, colours, and animations.
-- Javascript lets you program the behaviour of your website: If someone clicks button A, Menu B opens.
-
-This split of content, presentation, and behaviour into different languages is called *Separation of Concerns*. Maintaining it will make your life easier.
-
-|Language  |Intent     |
-|----------|-----------|
-|HTML      |Content    |
-|CSS       |Style      |
-|Javascript|Interaction|
+- Also: Separation of Concerns.

@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: post
-title: "Getting started with CSS"
-intro: Selectors, Inheritance, Specificity
+title: "CSS Part 1: Typography"
+intro: Selectors, Inheritance, Specificity, Typography
 date: 2019-01-04
 ---
 
@@ -41,3 +41,21 @@ Our HTML file already has some styles applied from the browser, we can leave tho
     box-sizing: border-box;
 }
 ```
+
+## Typography 
+
+(This makes sense because we're doing mobile first: You want to start with typography and work your way up).
+
+Web typography differs from print typography in that it isn't fixed: People can change their type sizes, people use different screens, different browsers break words and render letters differently. These are all good things to embrace.
+
+This is why I like to use ```rem``` units to size stuff (as opposed to pixels): Make everything relative to the user's preferences. With different-density displays, a pixel doesn't mean all that much, anyway.
+
+- ```color```, ```border```
+- ```font-family```, ```font-size```, ```font-style``` etc.
+- Pseudoclasses: ```hover:```, ```focus:```
+- ```@fontface``` (this is a good place to introduce @-rules: Special functions to do special things)
+
+## Further Reading
+
+- Tim Brown (2018): *[Flexible Typesetting](https://abookapart.com/products/flexible-typesetting)*. A Book Apart.
+- Jason Santa Maria (2014): *[On Web Typography](https://abookapart.com/products/on-web-typography)*. A Book Apart.
