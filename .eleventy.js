@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPairedShortcode("todo", function (todoItems) {
         return (
-`<div class='todo'><div class='progress'><div class='progress-inner'></div></div>
+            `<div class='todo'><div class='progress'><div class='progress-inner'></div></div>
             ${todoItems}
 </div>
             `
@@ -31,4 +31,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("exercises/chapter-2");
     eleventyConfig.addPassthroughCopy("exercises/chapter-3");
     eleventyConfig.addPassthroughCopy("assets");
+
+    return {
+        pathPrefix: "/untitled-coding-workshop/"
+    }
 };
