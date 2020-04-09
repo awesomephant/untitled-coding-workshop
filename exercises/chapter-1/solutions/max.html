@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            padding: 15px
+        }
+        canvas {
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id='world'></canvas>
+    <script src="./solutions/max.js"></script>
+    <script>
+        function draw() {
+            const c = document.querySelector('#world').getContext('2d')
+            c.canvas.width = window.innerWidth - 100;
+            c.canvas.height = window.innerHeight - 100;
+        
+            c.fillStyle = 'rgb(250,130,11)'
+            c.fillRect(100, 100, 100, 100)
+            c.fillRect(10, 200, 100, 100)
+            c.fillRect(10, 200, 100, 100)
+            c.fillRect(10, 300, 500, 104)
+        }
+        draw()
+    </script>
+</body>
+</html>
