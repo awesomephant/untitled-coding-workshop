@@ -106,7 +106,7 @@ Set up your profile and share the link in the workshop group. Once you've done t
 While not necessary for this workshop, it might be useful to know that you can upgrade to a professional acount for free through [Github Education](https://education.github.com/students).
 
 ## Further Reading
-- Scott Chacon, Ben Straub (2014): *Pro Git*. Available at [https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2). Much of the what this book talks about is above my head, but [Chapter 1 does a good job explaining](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) what version control is and why it exists.
+- Scott Chacon, Ben Straub (2014): *Pro Git*. Available at [https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2). Much of what this book talks about is above my head, but [Chapter 1 does a good job explaining](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) what version control is and why it exists.
 
 <!-- ## Set up workshop repository
 - Open the command line and navigate to a place in your filesystem where you'd like to keep the files for this workshop
