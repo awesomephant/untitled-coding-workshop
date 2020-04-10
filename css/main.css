@@ -27,7 +27,14 @@
     --red: rgb(255, 76, 5);
     --green: rgb(0, 116, 48);
     --font-text: 'franklin-gothic-urw', 'IBM Plex Mono';
-    --ms-0: 1.3rem
+    --ms-0: 1.1rem;
+    --ms-1: calc(--var(--ms-0) * 1.5)
+}
+
+@media (min-width: 40rem){
+    :root {
+        --ms-0: 1.3rem
+    }
 }
 
 body {
@@ -136,6 +143,10 @@ a:focus {
     text-align: center;
 }
 
+.article--header img {
+    max-width: 100%;
+}
+
 .article--title {
     font-weight: 500;
     font-size: 2rem;
@@ -207,6 +218,13 @@ a:focus {
     font-size: 1.4rem;
     transition: 200ms;
     overflow: hidden;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 40rem){
+    .todo {
+        font-size: 1.4rem;
+    }
 }
 
 .todo[data-percentage="1"] {
@@ -226,6 +244,7 @@ a:focus {
 .progress-inner {
     transition: 200ms;
     height: 100%;
+    width: 0;
     position: relative;
     background: var(--green);
 }
@@ -268,6 +287,7 @@ a:focus {
     border-bottom: 1px solid lightgray;
     padding: .8em 1em;
     margin-bottom: 0;
+    display: flex;
 }
 
 .todo li:last-of-type {
