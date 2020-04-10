@@ -36,9 +36,9 @@ The set of tools we're using for this workshop is pretty close to what I use for
 |Task|Tool|
 |----|----|
 |Writing code|Visual Studio Code|
-|Build process|The command line + node.js|
+|Build process|Node.js on the command line|
 |Local Testing|Chrome or Firefox|
-|Version Control|Git/Github|
+|Version Control|Git and Github|
 
 The goal for this week is to get all of these things installed on your machine, and to write, build, test, and upload a small program to verify that everything is working correctly.
 
