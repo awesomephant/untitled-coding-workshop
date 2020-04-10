@@ -16,14 +16,17 @@
     
 <article class='article'>
     <header class="article--header">
-        <h1 class='article--title'>Workflow/Tools</h1>
+        
+            <img src="/untitled-coding-workshop/assets/tools.png" alt="">
+        
+        <h1 class='article--title'>Workflow and Tools</h1>
         
         <p class="article--intro">Installing a code editor and development tools, using the command line, setting up a Github account.</p>
         
     </header>
     <main class="article--body">
-        <div class='todo'><div class='progress'><div class='progress-inner'></div></div>
-<h2>💡 Things to do</h2>
+        <div data-percentage='0' class='todo'><div class='progress'><div class='progress-inner'></div></div>
+<h2>Things to do</h2>
 <ul>
 <li><a href="#visual-studio">Install Visual Studio Code</a></li>
 <li><a href="#the-command-line">Get used to the command line</a></li>
@@ -32,11 +35,13 @@
 <li><a href="#github">Make a Github Account</a></li>
 </ul>
 </div>
-<p>Programming is as much about using the right tools and setting up a good workflow as it is about actually typing out code. Most production work has a workflow that looks like this:</p>
+<p>Programming is as much about using the right tools and setting up a good workflow as it is about actually typing out code.</p>
+<p>There are programming environments that let you get around most of this setup work, but I think knowing how to set up a workflow yourself, and using industry-standard tools will be useful enough to justify the effort.</p>
+<p>In production work, the workflow usually looks like this:</p>
 <ol>
 <li>You write some code.</li>
-<li>You run some kind of build process to do stuff with that code.</li>
-<li>You test your program on your own computer</li>
+<li>You run some kind of build step to post-process the code you just wrote. This can mean different things in different contexts – automated testing, minification, and resolving dependencies are pretty common.</li>
+<li>You test your program on your own computer.</li>
 <li>You upload your code to some kind of version control system (more on this later).</li>
 </ol>
 <p>What specific tools you use to accomplish these things depends on context – what kind of software you're writing, whether you're working alone or in a team, and so on.</p>
@@ -72,7 +77,7 @@
 <p>Visual Studio Code is an open-source code editor developed by Microsoft. Note that this is different from Visual Studio (without the <em>Code</em>). If you already have a different editor, that's okay too.</p>
 <p><a class='btn' href='https://code.visualstudio.com/'>Download Visual Studio Code</a></p>
 <p>Visual Studio Code is really nothing more than a <em>really good</em> editor for text files. If you wanted to, you could do all of the programming that follows in TextEdit (I had a teacher once who made us do that for weeks).</p>
-<p>The code editor is where you'll be spending most of your time, so it's a good idea to get comfortable with it.</p>
+<p>The code editor is where you'll be spending most of your time, so it's a good idea to get comfortable with it. Find a colour scheme and typeface you like, and set a comfortable font size.</p>
 <p>My main suggestion is to start using keyboard commands immediately, even if it's awkward at first. You only need to remember a couple to begin with:</p>
 <ul>
 <li><code>Cmd+Shift+P</code> to open the command panel. This is a search function for eveything that's available in the menus. You can open files, swap colur themes, open and close the sidebar, change your editor font size and whatever else you may need to do. it also displays additional keyboard shortcuts for common tasks, so you can start to pick those up over time.</li>
@@ -82,12 +87,12 @@
 <p>The command line (or <em>Terminal</em> on Mac) is a window that lets you do things on your computer by typing in commands and hitting <code>Enter</code>. It takes a while to get used to, but once you are you have access to a huge range of tools to make your life as a programmer easier.</p>
 <p>You open the command line by looking for the Terminal app.</p>
 <ul>
-<li>Type <code>ls</code> and hit <code>Enter</code> on your keyboard. You should see a list of all files and directories you have in your home directory.</li>
-<li>Think of any directory in the list, type <code>cd [name of the directory]</code>, and hit <code>Enter</code>. If you spelled everything correctly, you should now be inside whatever directory you thought of. The directory name should be displayed left of your cursor.</li>
-<li>Run <code>ls</code> again. Now, you should see a list of everything inside the directory <code>cd</code>'d into in the previous step.</li>
-<li>To go back up to the parent directory, run <code>cd ..</code></li>
+<li>Type <code>ls</code> and hit <code>Enter</code> on your keyboard. You should see a list of all files and folders you have in your home folder.</li>
+<li>Think of any folder in the list, type <code>cd [name of the folder]</code>, and hit <code>Enter</code>. If you spelled everything correctly, you should now be inside whatever folder you thought of. The name of the folder should be displayed left of your cursor.</li>
+<li>Run <code>ls</code> again. Now, you should see a list of everything inside the folder <code>cd</code>'d into in the previous step.</li>
+<li>To go back up to the parent folder, run <code>cd ..</code></li>
 </ul>
-<p>Spend a few minutes <code>cd</code>-ing and <code>ls</code>-ing around your file system. You can speed things up by typing only the first few letters of a directory name and hitting <code>Tab</code>, which will complete the name automatically.</p>
+<p>Spend a few minutes <code>cd</code>-ing and <code>ls</code>-ing around your file system. You can speed things up by typing only the first few letters of a filename and hitting the <code>Tab</code> key, which will complete the name automatically.</p>
 <p>If you're comfortable opening the command line and moving up and down your folders, you're ready to move on.</p>
 <h2>Node</h2>
 <p>Node (or Node.js) is a programming language. We probably won't be writing much node ourselves in this workshop, but we are going to use tools that depend on it.</p>
