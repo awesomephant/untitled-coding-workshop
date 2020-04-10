@@ -2,14 +2,15 @@
 layout: post
 tags: post
 supTitle: "Chapter 1"
-title: "Workflow/Tools"
+title: "Workflow and Tools"
 intro: Installing a code editor and development tools, using the command line, setting up a Github account.
 date: 2019-01-02
+thumbnail: /assets/tools.png
 ---
 
 {% todo %}
 
-## 💡 Things to do
+## Things to do
 - [Install Visual Studio Code](#visual-studio)
 - [Get used to the command line](#the-command-line)
 - [Install node](#node)
@@ -17,11 +18,15 @@ date: 2019-01-02
 - [Make a Github Account](#github)
 {% endtodo %}
 
-Programming is as much about using the right tools and setting up a good workflow as it is about actually typing out code. Most production work has a workflow that looks like this:
+Programming is as much about using the right tools and setting up a good workflow as it is about actually typing out code.
+
+There are programming environments that let you get around most of this setup work, but I think knowing how to set up a workflow yourself, and using industry-standard tools will be useful enough to justify the effort.
+
+In production work, the workflow usually looks like this:
 
 1. You write some code.
-2. You run some kind of build process to do stuff with that code.
-3. You test your program on your own computer
+2. You run some kind of build step to post-process the code you just wrote. This can mean different things in different contexts – automated testing, minification, and resolving dependencies are pretty common.
+3. You test your program on your own computer.
 4. You upload your code to some kind of version control system (more on this later).
 
 What specific tools you use to accomplish these things depends on context – what kind of software you're writing, whether you're working alone or in a team, and so on. 
@@ -46,7 +51,7 @@ Visual Studio Code is an open-source code editor developed by Microsoft. Note th
 
 Visual Studio Code is really nothing more than a *really good* editor for text files. If you wanted to, you could do all of the programming that follows in TextEdit (I had a teacher once who made us do that for weeks).
 
-The code editor is where you'll be spending most of your time, so it's a good idea to get comfortable with it.
+The code editor is where you'll be spending most of your time, so it's a good idea to get comfortable with it. Find a colour scheme and typeface you like, and set a comfortable font size.
 
 My main suggestion is to start using keyboard commands immediately, even if it's awkward at first. You only need to remember a couple to begin with:
 
@@ -59,12 +64,12 @@ The command line (or *Terminal* on Mac) is a window that lets you do things on y
 
 You open the command line by looking for the Terminal app.
 
-- Type ```ls``` and hit ```Enter``` on your keyboard. You should see a list of all files and directories you have in your home directory.
-- Think of any directory in the list, type ```cd [name of the directory]```, and hit ```Enter```. If you spelled everything correctly, you should now be inside whatever directory you thought of. The directory name should be displayed left of your cursor.
-- Run ```ls``` again. Now, you should see a list of everything inside the directory ```cd```'d into in the previous step.
-- To go back up to the parent directory, run ```cd ..``` 
+- Type ```ls``` and hit ```Enter``` on your keyboard. You should see a list of all files and folders you have in your home folder.
+- Think of any folder in the list, type ```cd [name of the folder]```, and hit ```Enter```. If you spelled everything correctly, you should now be inside whatever folder you thought of. The name of the folder should be displayed left of your cursor.
+- Run ```ls``` again. Now, you should see a list of everything inside the folder ```cd```'d into in the previous step.
+- To go back up to the parent folder, run ```cd ..``` 
 
-Spend a few minutes ```cd```-ing and ```ls```-ing around your file system. You can speed things up by typing only the first few letters of a directory name and hitting ```Tab```, which will complete the name automatically.
+Spend a few minutes ```cd```-ing and ```ls```-ing around your file system. You can speed things up by typing only the first few letters of a filename and hitting the ```Tab``` key, which will complete the name automatically.
 
 If you're comfortable opening the command line and moving up and down your folders, you're ready to move on.
 

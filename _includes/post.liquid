@@ -4,6 +4,9 @@ layout: base
 
 <article class='article'>
     <header class="article--header">
+        {% if thumbnail %}
+            <img src="{{thumbnail | url}}" alt="">
+        {% endif %}
         <h1 class='article--title'>{{ title }}</h1>
         {% if intro %}
         <p class="article--intro">{{intro}}</p>

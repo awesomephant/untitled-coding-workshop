@@ -6,12 +6,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(inclusiveLangPlugin, {
         templateFormats: ["md"],
         words:
-            "simply,obviously,basically,of course,clearly,just,everyone knows,however,easy"
+            "simply,obviously,basically,of course,clearly,just,everyone knows,however,easy,directory,directories,easy"
     });
 
     eleventyConfig.addPairedShortcode("todo", function (todoItems) {
         return (
-            `<div class='todo'><div class='progress'><div class='progress-inner'></div></div>
+            `<div data-percentage='0' class='todo'><div class='progress'><div class='progress-inner'></div></div>
             ${todoItems}
 </div>
             `
