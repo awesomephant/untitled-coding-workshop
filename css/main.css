@@ -22,18 +22,20 @@
 }
 
 :root {
-    --lightgray: rgb(246, 243, 238);
+    --lightgray: rgb(236, 234, 232);
     --darkgray: rgb(135, 137, 149);
     --red: rgb(255, 76, 5);
     --green: rgb(0, 116, 48);
     --font-text: 'franklin-gothic-urw', 'IBM Plex Mono';
     --ms-0: 1.1rem;
-    --ms-1: calc(--var(--ms-0) * 1.5)
+    --ms-1: 1.65rem;
+    --ms-2: 2.475rem
 }
 
 @media (min-width: 40rem){
     :root {
-        --ms-0: 1.3rem
+        --ms-0: 1.3rem;
+        --ms-1: 1.95rem
     }
 }
 
@@ -76,59 +78,33 @@ a:focus {
 }
 
 .home--nav {
-    max-width: 50rem;
+    max-width: 40rem;
     margin: 0 auto;
-    text-align: center;
-    font-family: var(--font-text);
-    display: grid;
 }
 
 .home--nav div {
     margin-bottom: 4rem;
 }
 
-@media(min-width: 55rem) {
-    .home--nav {
-        grid-template-columns: 1fr 1fr;
-        border-top: 1px solid var(--darkgray);
-        border-left: 1px solid var(--darkgray);
-        border-radius: 2px;
-    }
-
-    .home--nav div {
-        border-bottom: 1px solid var(--darkgray);
-        border-right: 1px solid var(--darkgray);
-        padding: 1rem;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-}
-
 .home--nav h3 {
     font-weight: normal;
-    font-size: 1rem;
-    margin-bottom: .5rem;
+    font-size: var(--ms-0);
+    margin-bottom: .2em;
 }
 
 .home--nav a {
     display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 500;
-    border-bottom: 4px solid var(--red);
+    font-size: var(--ms-2);
+    font-weight: 600;
     text-decoration: none;
-    margin-bottom: 1rem;
+    margin-bottom: .2em;
+    border-bottom: 3px solid var(--lightgray);
 }
 
-.home--nav a:hover {}
 
 .home--nav p {
-    max-width: 25em;
-    font-size: 1rem;
-    word-spacing: -.2em;
-    line-height: 1.5;
-    margin: 0 auto;
+    font-size: var(--ms-1);
+    line-height: 1.2;
 }
 
 .article {
@@ -149,13 +125,13 @@ a:focus {
 
 .article--title {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: var(--ms-2);
     font-weight: bold;
     display: inline-block;
 }
 
 .article--intro {
-    font-size: 1.8rem;
+    font-size: var(--ms-1);
 }
 
 .article--body {
@@ -174,17 +150,20 @@ a:focus {
     margin-left: 1em;
 }
 
+.article--body figure {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 .article--body img {
-    max-width: 140%;
-    margin: 0 auto;
-    margin-left: -20%;
     display: block;
+    flex-grow: 0;
 }
 
 .article--body h2 {
     font-weight: normal;
-    margin-top: 2rem;
-    font-size: 1.8rem;
+    margin-top: 1em;
+    font-size: var(--ms-1);
     text-align: center;
     font-weight: 600;
     letter-spacing: .02em;
@@ -193,21 +172,31 @@ a:focus {
 }
 
 .article--body h3 {
-    font-weight: normal;
-    text-decoration: underline;
-    margin-top: 2rem;
-    margin-bottom: .5rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    font-size: var(--ms-0);
+    margin-top: 2em;
+    margin-bottom: .1em;
 }
 
 .article--body pre {
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 2px;
-    line-height: 1.3;
+    background: var(--lightgray);
+    overflow-x: auto;
+    margin-bottom: 1em;
 }
 
 .article--body code {
     font-family: 'IBM Plex Mono';
-    background: var(--lightgray)
+    background: var(--lightgray);
+    border-radius: 2px;
+    padding: 0 4px;
+    font-size: .9em;
+}
+
+.pull-double {
+    margin-left: -.37em;
 }
 
 .todo {
@@ -215,16 +204,9 @@ a:focus {
     border-radius: 2px;
     margin-bottom: 2em;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .1);
-    font-size: 1.4rem;
     transition: 200ms;
     overflow: hidden;
-    font-size: 1.2rem;
-}
-
-@media (min-width: 40rem){
-    .todo {
-        font-size: 1.4rem;
-    }
+    font-size: var(--ms-0);
 }
 
 .todo[data-percentage="1"] {
@@ -253,7 +235,7 @@ a:focus {
     widtH: 100%;
     font-weight: normal;
     margin: 0;
-    font-size: 1.4rem;
+    font-size: var(--ms-0);
     border-bottom: 1px solid lightgray;
     padding: .8em 1em;
 }
