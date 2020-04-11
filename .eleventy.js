@@ -1,7 +1,14 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const typesetPlugin = require('eleventy-plugin-typeset');
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(
+        typesetPlugin({
+            only: '.article--body',
+            disable: []
+        })
+    );
 
     eleventyConfig.addPlugin(inclusiveLangPlugin, {
         templateFormats: ["md"],
@@ -20,6 +27,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("cta", function (text, href) {
         return (
             `<a class='btn' href='${href}'>${text}</a>
+            `
+        );
+    });
+ 
+    eleventyConfig.addShortcode("fig", function (url, caption) {
+        return (
+            `<figure><img loading="lazy" src='/untitled-coding-workshop/${url}'/><figcaption>${caption}</figcaption></figure>
             `
         );
     });
