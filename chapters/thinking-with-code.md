@@ -11,9 +11,9 @@ thumbnail: /assets/tools.png
 {% todo %}
 
 ## Things to do
-- [Get the workshop repo](#clone)
-- [Make a drawing](#clone)
-- [Commit your changes](#clone)
+- [Get the workshop repository](#get-the-work­shop-repos­i­tory)
+- [Draw an object in your room](#draw-an-ob­ject-in-your-room)
+- [Commit your changes](#commit-your-changes)
 {% endtodo %}
 
 
@@ -66,7 +66,7 @@ Open VSCode, and open the workshop folder using the command palette (```Cmd+Shif
 
 Feel free to look at some of the files in the folder. You'll recognise that ```index.html``` inside the ```exercises``` folder is the welcome page we saw in the previous step.
 
-## Write a program / Make a drawing
+## Draw an object in your room
 Under ```exercises/chapter-1```, you'll find a file called ```max.html```. Make a copy of it, and give the copy a different name. This is the file where you'll be doing your coding.
 
 Open it in your browser by going to ```http://localhost:3000/chapter-1/[Your filename here]```. When I work on websites, I like to have VSCode and the browser open at the same time, like this:
