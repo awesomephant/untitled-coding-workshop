@@ -189,10 +189,13 @@ a:focus {
 
 .article--body code {
     font-family: 'IBM Plex Mono';
+    font-feature-settings: "ss02", "ss03";
     background: var(--lightgray);
     border-radius: 2px;
-    padding: 0 4px;
     font-size: .9em;
+}
+.article--body p code {
+    padding: 0 4px;
 }
 
 .pull-double {

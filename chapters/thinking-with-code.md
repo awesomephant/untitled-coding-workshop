@@ -30,7 +30,7 @@ Open the command line on your machine, and navigate to a place in your file syst
 
 Then, we're going to download a copy of the workshop repository into a folder on your computer by running:
 
-```
+```bash
 git clone https://github.com/awesomephant/ucw-exercises.git
 ``` 
 
@@ -66,25 +66,68 @@ Open VSCode, and open the workshop folder using the command palette (```Cmd+Shif
 
 Feel free to look at some of the files in the folder. You'll recognise that ```index.html``` inside the ```exercises``` folder is the welcome page we saw in the previous step.
 
-## Make a drawing
+## Write a program / Make a drawing
 Under ```exercises/chapter-1```, you'll find a file called ```max.html```. Make a copy of it, and give the copy a different name. This is the file where you'll be doing your coding.
 
-Open it in your browser by going to ```http://localhost:3000/chapter-1/[Your filename here]```
+Open it in your browser by going to ```http://localhost:3000/chapter-1/[Your filename here]```. When I work on websites, I like to have VSCode and the browser open at the same time, like this:
+
+
+There are quite a few things going on in this file, but for now we'll focus on the part between ```<script>``` and ```</script>```. This is a Javascript program. To understand what's going on here (and in any other program), you read it line by line from to to bottom.
+
+First, we're setting up some variables. We'll talk about variables in detail later, but for now it's enough to know that ```el``` and ```c``` are references to a special HTML element called ```<canvas>``` that lets us draw two-dimensional images using Javascript.
+
+```js
+const el = document.querySelector('#world')
+const c = el.getContext('2d')
+```
+
+Then, we're setting the dimensions of that element relative to the size of your browser window:
+
+```js
+c.canvas.width = window.innerWidth - 100;
+c.canvas.height = window.innerHeight - 100;
+```
+Finally, there are a lot of lines that look like this:
+
+```js
+c.fillRect(120, 300, 900, 10)
+```
+
+I could write a paragraph about what ```fillRect()``` and all the numbers mean, but it probably more effective for you to find out for yourself.
+
+Spend some time changing the numbers, deleting, and adding lines and watch what happens in the browser window (it should refresh automatically each time you save a file).
+
+When you feel comfortable, make a drawing of an object in your room.
+
+### Looking things up
+As you start experimenting, you'll probably start to have questions: How do I draw an outlined shape? How do I draw a circle? How do I draw a line?
+
+While I'm of course happy to help out, I would encourage you look for answers yourself. This isn't because I'm lazy (although I am), but because finding and reading technical documentation are central skills in programming.
+
+For Javascript, [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/) is one of the best places to look things up. The [entry about fillRect()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect), a method you're already familar with, might be a good place to start.
+
+[Stackoverflow](https://stackoverflow.com/) also has good answers to many specific questions, although they're often just a code snippet with little explanation.
 
 ## Commit your changes
 
-```
+
+
+```bash
 git status
 ```
 
-```
+```bash
 git add exercises/chapter-1/[your file]
 ```
 
-```
+```bash
 git commit -m "Some message"
 ```
 
-```
+```bash
 git push
 ```
+
+## Further Reading
+
+- [Drawing shapes with canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) on MDN
