@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Untitled Coding Workshop</title>
+    <link rel="stylesheet" href=" /untitled-coding-workshop/css/main.css">
+    <link rel="stylesheet" href=" /untitled-coding-workshop/css/syntax.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jfg7jkq.css">
+</head>
+<body>
+    <header class="site--header">
+        <h1><a class="site--title" href="/untitled-coding-workshop/">Untitled Coding Workshop</a></h1>
+    </header>
+    
+<article class="article">
+    <header class="article--header">
+        
+            <img src="/untitled-coding-workshop/assets/tools.png" alt>
+        
+        <h1 class="article--title">Hello World</h1>
+        
+        <p class="article--intro">intro goes here</p>
+        
+    </header>
+    <main class="article--body">
+        <div data-percentage="0" class="todo"><div class="progress"><div class="progress-inner"></div></div>
+<h2>Things to do</h2>
+<ul>
+<li><a href="#get-the-work%C2%ADshop-repos%C2%ADi%C2%ADtory">Get the work­shop repos­i­tory</a></li>
+<li><a href="#draw-an-ob%C2%ADject-in-your-room">Draw an ob­ject in your room</a></li>
+<li><a href="#commit-your-changes">Commit your changes</a></li>
+</ul>
+</div>
+<h2>Get the work­shop repos­i­tory</h2>
+<p>After in­stalling all the tools we need in the pre­vi­ous chap­ter, we’re ready to start work­ing on some code.</p>
+<p>I’ve cre­ated a git repos­i­tory where we’ll keep all of our work at <a href="https://github.com/awesomephant/ucw-exercises">github.com/​awe­somephant/​ucw-ex­er­cises</a>.</p>
+<p>To start work­ing with this repo, you need to com­plete a few steps.</p>
+<h3>Clone the repos­i­tory</h3>
+<p>Open the com­mand line on your ma­chine, and nav­i­gate to a place in your ﬁle sys­tem where you’d like to keep the work­shop folder.</p>
+<p>Then, we’re go­ing to down­load a copy of the work­shop repos­i­tory into a folder on your com­puter by run­ning:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> clone https://github.com/awesomephant/ucw-exercises.git</span></code></pre>
+<p>As you can see, this com­mand has three parts:</p>
+<ul>
+<li><code>git</code> starts the git pro­gram we in­stalled pre­vi­ously.</li>
+<li><code>clone</code> is a <em>com­mand</em> within git for mak­ing copies of repos­i­to­ries.</li>
+<li><code>[the url]</code> is an <em>ar­gu­ment</em> of the clone com­mand that tells it which repos­i­tory to clone.</li>
+</ul>
+<p>This multi-part struc­ture is very com­mon in com­mand-line tools. We’ve al­ready been us­ing it with <code>cd</code>, and we’ll en­counter more of it soon.</p>
+<p>When <code>git clone</code> is ﬁn­ished, it should have cre­ated a new folder called <code>ucw-exercises</code>. You can ver­ify this by run­ning <code>ls</code>, or look­ing for it Finder.</p>
+<h3>Install de­pen­den­cies</h3>
+<p>In short, de­pen­den­cies are pro­grams writ­ten by other peo­ple that our pro­gram is built on top of. Most pro­grams are writ­ten on top of many de­pen­den­cies&thinsp;&mdash;&thinsp;of­ten dozens or hun­dreds.</p>
+<p>In this pro­ject, we only need two: <a href="https://gulpjs.com/">Gulp</a> and <a href="https://www.browsersync.io/">Browsersync</a>. Gulp is a pro­gram that will help us set up our build process, and Browsersync will give us an auto-up­dat­ing pre­view of what we’re work­ing on.</p>
+<p>On the com­mand line, run <code>cd ucw-exercises</code> to en­ter the pro­ject di­rec­tory. Then, run <code>npm install</code> to in­stall our de­pen­den­cies.</p>
+<p>Note that you only need to in­stall the de­pen­den­cies the ﬁrst time you start a new pro­ject. Whenever you come come back to it, you can go straight to the fol­low­ing step.</p>
+<h3>Start the de­vel­op­ment server</h3>
+<p>While in the pro­ject di­rec­tory, run <code>npm run start</code>.</p>
+<p>This will tell Browsersync to start tiny web­server on your com­puter that only you can see. This server has a spe­cial ad­dress: <a href="http://localhost:3000">http://​lo­cal­host:3000</a>.</p>
+<p>Browsersync should open this <span class="small-caps">URL</span> in your browser au­to­mat­i­cally (if not, type it in man­u­ally). If you see a page with a wel­come mes­sage, you’re good to move on.</p>
+<p>You can stop the server (or any other com­mand line pro­gram) by hit­ting <code>Ctrl+C</code>.</p>
+<h3>Open the work­shop folder in VSCode</h3>
+<p>Open VSCode, and open the work­shop folder us­ing the com­mand palette (<code>Cmd+Shift+P</code>). You should see a whole list of ﬁles and folder on the left, and an empty pane on the right.</p>
+<p>Feel free to look at some of the ﬁles in the folder. You’ll recog­nise that <code>index.html</code> in­side the <code>exercises</code> folder is the wel­come page we saw in the pre­vi­ous step.</p>
+<h2>Draw an ob­ject in your room</h2>
+<p>Under <code>exercises/chapter-1</code>, you’ll ﬁnd a ﬁle called <code>max.html</code>. Make a copy of it, and give the copy a dif­fer­ent name. This is the ﬁle where you’ll be do­ing your cod­ing.</p>
+<p>Open it in your browser by go­ing to <code>http://localhost:3000/chapter-1/[Your filename here]</code>. When I work on web­sites, I like to have VSCode and the browser open at the same time, like this:</p>
+<p>There are quite a few things go­ing on in this ﬁle, but for now we’ll fo­cus on the part be­tween <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code>. This is a Javascript pro­gram. To un­der­stand what’s go­ing on here (and in any other pro­gram), you read it line by line from to to bot­tom.</p>
+<p>First, we’re set­ting up some vari­ables. We’ll talk about vari­ables in de­tail later, but for now it’s enough to know that <code>el</code> and <code>c</code> are ref­er­ences to a spe­cial <span class="small-caps">HTML</span> el­e­ment called <code>&lt;canvas&gt;</code> that lets us draw two-di­men­sional im­ages us­ing Javascript.</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#world'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">const</span> c <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span></span></code></pre>
+<p>Then, we’re set­ting the di­men­sions of that el­e­ment rel­a­tive to the size of your browser win­dow:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span></code></pre>
+<p>Finally, there are a lot of lines that look like this:</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">900</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></span></code></pre>
+<p>I could write a para­graph about what <code>fillRect()</code> and all the num­bers mean, but it prob­a­bly more ef­fec­tive for you to ﬁnd out for your­self.</p>
+<p>Spend some time chang­ing the num­bers, delet­ing, and adding lines and watch what hap­pens in the browser win­dow (it should re­fresh au­to­mat­i­cally each time you save a ﬁle).</p>
+<p>When you feel com­fort­able, make a draw­ing of an ob­ject in your room.</p>
+<h3>Looking things up</h3>
+<p>As you start ex­per­i­ment­ing, you’ll prob­a­bly start to have ques­tions: How do I draw an out­lined shape? How do I draw a cir­cle? How do I draw a line?</p>
+<p>While I’m of course happy to help out, I would en­cour­age you look for an­swers your­self. This is­n’t be­cause I’m lazy (although I am), but be­cause ﬁnd­ing and read­ing tech­ni­cal doc­u­men­ta­tion are cen­tral skills in pro­gram­ming.</p>
+<p>For Javascript, <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network (<span class="small-caps">MDN</span>)</a> is one of the best places to look things up. The <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">en­try about ﬁll­Rect()</a>, a method you’re al­ready fami­lar with, might be a good place to start.</p>
+<p><a href="https://stackoverflow.com/">Stackoverﬂow</a> also has good an­swers to many spe­ciﬁc ques­tions, al­though they’re of­ten just a code snip­pet with lit­tle ex­pla­na­tion.</p>
+<h2>Commit your changes</h2>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> status</span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> <span class="token function">add</span> exercises/chapter-1/<span class="token punctuation">[</span>your file<span class="token punctuation">]</span></span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> commit -m <span class="token string">"Some message"</span></span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> push</span></code></pre>
+<h2>Further Reading</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes with can­vas</a> on <span class="small-caps">MDN</span></li>
+</ul>
+
+    </main>
+
+</article>
+    <script src="/untitled-coding-workshop/js/site.js"></script>
+</body>
+</html>
