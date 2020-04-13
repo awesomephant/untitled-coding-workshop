@@ -22,7 +22,7 @@
 }
 
 :root {
-    --lightgray: rgb(236, 234, 232);
+    --lightgray: rgb(243, 242, 241);
     --darkgray: rgb(135, 137, 149);
     --red: rgb(255, 76, 5);
     --green: rgb(0, 116, 48);
@@ -116,11 +116,14 @@ a:focus {
 .article--header {
     margin-bottom: 4rem;
     font-family: var(--font-text);
-    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 .article--header img {
     max-width: 100%;
+    display: block;
 }
 
 .article--title {
@@ -132,6 +135,7 @@ a:focus {
 
 .article--intro {
     font-size: var(--ms-1);
+    text-align: center;
 }
 
 .article--body {
@@ -185,6 +189,9 @@ a:focus {
     background: var(--lightgray);
     overflow-x: auto;
     margin-bottom: 1em;
+    margin-top: 1.5em;
+    position: relative;
+    overflow: visible;
 }
 
 .article--body code {

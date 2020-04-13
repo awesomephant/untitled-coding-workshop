@@ -17,11 +17,11 @@
 <article class="article">
     <header class="article--header">
         
-            <img src="/untitled-coding-workshop/assets/tools.png" alt>
+            <img src="/untitled-coding-workshop/assets/layout.png" alt>
         
         <h1 class="article--title">Hello World</h1>
         
-        <p class="article--intro">intro goes here</p>
+        <p class="article--intro">Cloning the workshop repository, drawing basic shapes, comitting your changes.</p>
         
     </header>
     <main class="article--body">
@@ -35,8 +35,7 @@
 </div>
 <h2>Get the work­shop repos­i­tory</h2>
 <p>After in­stalling all the tools we need in the pre­vi­ous chap­ter, we’re ready to start work­ing on some code.</p>
-<p>I’ve cre­ated a git repos­i­tory where we’ll keep all of our work at <a href="https://github.com/awesomephant/ucw-exercises">github.com/​awe­somephant/​ucw-ex­er­cises</a>.</p>
-<p>To start work­ing with this repo, you need to com­plete a few steps.</p>
+<p>I’ve cre­ated a git repos­i­tory where we’ll keep all of our work at <a href="https://github.com/awesomephant/ucw-exercises">github.com/​awe­somephant/​ucw-ex­er­cises</a>. To start con­tribut­ing, you need to cre­ate a copy (or <em>clone</em>) of the re­spoitory on your com­puter.</p>
 <h3>Clone the repos­i­tory</h3>
 <p>Open the com­mand line on your ma­chine, and nav­i­gate to a place in your ﬁle sys­tem where you’d like to keep the work­shop folder.</p>
 <p>Then, we’re go­ing to down­load a copy of the work­shop repos­i­tory into a folder on your com­puter by run­ning:</p>
@@ -65,29 +64,32 @@
 <h2>Draw an ob­ject in your room</h2>
 <p>Under <code>exercises/chapter-1</code>, you’ll ﬁnd a ﬁle called <code>max.html</code>. Make a copy of it, and give the copy a dif­fer­ent name. This is the ﬁle where you’ll be do­ing your cod­ing.</p>
 <p>Open it in your browser by go­ing to <code>http://localhost:3000/chapter-1/[Your filename here]</code>. When I work on web­sites, I like to have VSCode and the browser open at the same time, like this:</p>
+<figure><img loading="lazy" src="/untitled-coding-workshop//assets/layout.png"><figcaption></figcaption></figure>
 <p>There are quite a few things go­ing on in this ﬁle, but for now we’ll fo­cus on the part be­tween <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code>. This is a Javascript pro­gram. To un­der­stand what’s go­ing on here (and in any other pro­gram), you read it line by line from to to bot­tom.</p>
-<p>First, we’re set­ting up some vari­ables. We’ll talk about vari­ables in de­tail later, but for now it’s enough to know that <code>el</code> and <code>c</code> are ref­er­ences to a spe­cial <span class="small-caps">HTML</span> el­e­ment called <code>&lt;canvas&gt;</code> that lets us draw two-di­men­sional im­ages us­ing Javascript.</p>
-<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#world'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">const</span> c <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span></span></code></pre>
-<p>Then, we’re set­ting the di­men­sions of that el­e­ment rel­a­tive to the size of your browser win­dow:</p>
-<pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span></code></pre>
-<p>Finally, there are a lot of lines that look like this:</p>
+<p>The ﬁrst four lines pre­pare a draw­ing sur­face and set its di­men­sions rel­a­tive to the size of your browser win­dow.</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#world'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">const</span> c <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span></code></pre>
+<p>Then, there are a lot of lines that look like this:</p>
 <pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">900</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></span></code></pre>
-<p>I could write a para­graph about what <code>fillRect()</code> and all the num­bers mean, but it prob­a­bly more ef­fec­tive for you to ﬁnd out for your­self.</p>
 <p>Spend some time chang­ing the num­bers, delet­ing, and adding lines and watch what hap­pens in the browser win­dow (it should re­fresh au­to­mat­i­cally each time you save a ﬁle).</p>
 <p>When you feel com­fort­able, make a draw­ing of an ob­ject in your room.</p>
 <h3>Looking things up</h3>
 <p>As you start ex­per­i­ment­ing, you’ll prob­a­bly start to have ques­tions: How do I draw an out­lined shape? How do I draw a cir­cle? How do I draw a line?</p>
-<p>While I’m of course happy to help out, I would en­cour­age you look for an­swers your­self. This is­n’t be­cause I’m lazy (although I am), but be­cause ﬁnd­ing and read­ing tech­ni­cal doc­u­men­ta­tion are cen­tral skills in pro­gram­ming.</p>
+<p>but be­cause ﬁnd­ing and read­ing tech­ni­cal doc­u­men­ta­tion are cen­tral skills in pro­gram­ming.</p>
 <p>For Javascript, <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network (<span class="small-caps">MDN</span>)</a> is one of the best places to look things up. The <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">en­try about ﬁll­Rect()</a>, a method you’re al­ready fami­lar with, might be a good place to start.</p>
 <p><a href="https://stackoverflow.com/">Stackoverﬂow</a> also has good an­swers to many spe­ciﬁc ques­tions, al­though they’re of­ten just a code snip­pet with lit­tle ex­pla­na­tion.</p>
-<h2>Commit your changes</h2>
+<h2>Record your changes to the repos­i­tory</h2>
+<p>Once you’re happy with your pro­gram, you’re ready to up­load your con­tri­bu­tion to the work­shop repos­i­tory.</p>
+<p>To do this, we’re go­ing to cre­ate a <em>com­mit</em> in git. A com­mit is a set of changes</p>
 <pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> status</span></code></pre>
+<p>This will list all the ﬁles you’ve edited since you down­loaded the repos­i­tory. If it looks cor­rect, you’re good to move on.</p>
 <pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> <span class="token function">add</span> exercises/chapter-1/<span class="token punctuation">[</span>your file<span class="token punctuation">]</span></span></code></pre>
-<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> commit -m <span class="token string">"Some message"</span></span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> commit -m <span class="token string">"Describe the changes you made."</span></span></code></pre>
 <pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> push</span></code></pre>
+<p>You can ver­ify every­thing worked cor­rectly by look­ing at the <a href="https://github.com/awesomephant/ucw-exercises">repos­i­tory page on Github</a>. After a few min­utes, your draw­ing should also be <a href="https://www.maxkoehler.com/ucw-exercises/exercises/">avail­able on the work­shop page</a>.</p>
 <h2>Further Reading</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes with can­vas</a> on <span class="small-caps">MDN</span></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">Chapter 2.2</a> from <em>Pro Git</em> has a more thor­ough ex­pla­na­tion of record­ing changes to a git repos­i­tory.</li>
 </ul>
 
     </main>
