@@ -29,36 +29,19 @@ pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[cl
 
 /* Code blocks */
 
-pre[class*="language-"] {
-    padding: .5rem;
-    overflow: auto;
-    background-color: var(--lightgray);
-    width: 100%;
-    position: relative;
-    margin-bottom: 1em;
-}
-
 pre[class*="language-"]:before {
     position: absolute;
-    top: .5rem;
-    right: 1rem;
+    top: -1.2rem;
+    left: 0rem;
     opacity: .5;
+    font-size: .9rem;
+    font-family: var(--font-text);
 }
 
 pre.language-html:before {content: 'HTML';}
 pre.language-css:before {content: 'CSS';}
-
-:not(pre)>code[class*="language-"], pre[class*="language-"] {}
-
-/* Inline code */
-
-:not(pre)>code[class*="language-"] {
-    padding: .2em;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    background: #f8f8f8;
-    border: 1px solid #dddddd;
-}
+pre.language-js:before {content: 'Javascript';}
+pre.language-bash:before {content: 'Command Line';}
 
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
     color: #999988;
