@@ -3,9 +3,9 @@ layout: post
 tags: post
 supTitle: "Chapter 2"
 title: "Hello World"
-intro: "intro goes here"
+intro: "Getting the workshop repository, drawing basic shapes, comitting your changes."
 date: 2019-01-03
-thumbnail: /assets/tools.png
+thumbnail: /assets/layout.png
 ---
 
 {% todo %}
@@ -16,48 +16,46 @@ thumbnail: /assets/tools.png
 - [Commit your changes](#commit-your-changes)
 {% endtodo %}
 
+In the previous chapter, we installed a series of tools that make up a professional programming workflow. Now, we're going to use these tools to write, test, and publish a short drawing program.
 
-## Get the workshop repository
-After installing all the tools we need in the previous chapter, we're ready to start working on some code.
+## Set up the workshop repository
 
-I've created a git repository where we'll keep all of our work at [github.com/awesomephant/ucw-exercises](https://github.com/awesomephant/ucw-exercises).
-
-To start working with this repo, you need to complete a few steps.
+I've created a git repository where we'll keep all of our work at [github.com/awesomephant/ucw-exercises](https://github.com/awesomephant/ucw-exercises). To contribute, you need to create a copy (or *clone*) of the respoitory on your computer.
 
 ### Clone the repository
 
-Open the command line on your machine, and navigate to a place in your file system where you'd like to keep the workshop folder.
-
-Then, we're going to download a copy of the workshop repository into a folder on your computer by running:
+We're going to use git to download a copy (or *clone*) of the workshop repository. To do this, open the command line and navigate to a place in your file system where you'd like to keep the workshop folder. Then run the following command:
 
 ```bash
-git clone https://github.com/awesomephant/ucw-exercises.git
+git clone https://github.com/awesomephant/ucw-exercises
 ``` 
+Note that the second argument – the location of the repository we want to clone – is the same as the URL of the repository page on Github.
 
-As you can see, this command has three parts:
-- ```git``` starts the git program we installed previously.
-- ```clone``` is a *command* within git for making copies of repositories.
-- ```[the url]``` is an *argument* of the clone command that tells it which repository to clone.
+When the command is finished, it should have created a new folder called ```ucw-exercises```. You can verify this by running ```ls```, or looking for it Finder.
 
-This multi-part structure is very common in command-line tools. We've already been using it with ```cd```, and we'll encounter more of it soon.
+### Set up the build process
 
-When ```git clone``` is finished, it should have created a new folder called ```ucw-exercises```. You can verify this by running ```ls```, or looking for it Finder.
+The build process for this project is simple. All it does for now is watch the project files, and refresh the browser window whenever you make a change.
 
-### Install dependencies
-In short, dependencies are programs written by other people that our program is built on top of. Most programs are written on top of many dependencies – often dozens or hundreds.
+I've already set this up, so all you need to do is install the necessary dependencies. You do that by ```cd```-ing into the project folder, and running: 
 
-In this project, we only need two: [Gulp](https://gulpjs.com/) and [Browsersync](https://www.browsersync.io/). Gulp is a program that will help us set up our build process, and Browsersync will give us an auto-updating preview of what we're working on. 
+```bash
+npm install
+```
 
-On the command line, run ```cd ucw-exercises``` to enter the project directory. Then, run ```npm install``` to install our dependencies.
+If the command finishes without errors, you're good to move on.
 
-Note that you only need to install the dependencies the first time you start a new project. Whenever you come come back to it, you can go straight to the following step.
+Note that you only need to install the dependencies the first time you start working on a new project. Whenever you come come back to it, you can go straight to the following step.
 
 ### Start the development server
-While in the project directory, run ```npm run start```.
+While in the project folder, run the following to start the build process:
+```bash
+npm run start
+```
 
-This will tell Browsersync to start tiny webserver on your computer that only you can see. This server has a special address: [http://localhost:3000](http://localhost:3000).
+This will start a tiny webserver on your computer that only you can see. It has this special URL: [http://localhost:3000](http://localhost:3000). This should open in your browser automatically. If not, copy it into the address bar manually.
 
-Browsersync should open this URL in your browser automatically (if not, type it in manually). If you see a page with a welcome message, you're good to move on.
+If you see a page with a welcome message, you're good to move on.
 
 You can stop the server (or any other command line program) by hitting ```Ctrl+C```.
 
@@ -66,68 +64,80 @@ Open VSCode, and open the workshop folder using the command palette (```Cmd+Shif
 
 Feel free to look at some of the files in the folder. You'll recognise that ```index.html``` inside the ```exercises``` folder is the welcome page we saw in the previous step.
 
-## Draw an object in your room
+## Draw what you see out of your window
 Under ```exercises/chapter-1```, you'll find a file called ```max.html```. Make a copy of it, and give the copy a different name. This is the file where you'll be doing your coding.
 
 Open it in your browser by going to ```http://localhost:3000/chapter-1/[Your filename here]```. When I work on websites, I like to have VSCode and the browser open at the same time, like this:
 
+{% fig "/assets/layout.png" "" %}
 
-There are quite a few things going on in this file, but for now we'll focus on the part between ```<script>``` and ```</script>```. This is a Javascript program. To understand what's going on here (and in any other program), you read it line by line from to to bottom.
+There are a few things going on in this file, but for now we'll focus on the part between ```<script>``` and ```</script>```. What you're looking at here is a Javascript program that draws a simple image to the screen:
 
-First, we're setting up some variables. We'll talk about variables in detail later, but for now it's enough to know that ```el``` and ```c``` are references to a special HTML element called ```<canvas>``` that lets us draw two-dimensional images using Javascript.
+Each line in this program is a command, not unlike the commands we've been entering on the command line. The computer starts at the top of the program and executes one command after the other until it reaches the end. 
+
+The first four lines set up a number of different *variables*. We'll deal with variables in detail later, but for now it's enough to understand that we're defining a two-dimensional drawing area slightly smaller than our browser window, and calling it ```c```.
 
 ```js
 const el = document.querySelector('#world')
 const c = el.getContext('2d')
-```
-
-Then, we're setting the dimensions of that element relative to the size of your browser window:
-
-```js
 c.canvas.width = window.innerWidth - 100;
 c.canvas.height = window.innerHeight - 100;
 ```
-Finally, there are a lot of lines that look like this:
+
+Then, we're defining a fill colour that should apply to ```c```.
+
+```js
+c.fillStyle = 'rgb(36,40,91)'
+```
+
+Finally, we're using a function called ```fillRect()``` to draw rectangles onto ```c```. The four numbers inside the brackets are called *parameters* and tell ```fillRect()``` where we want our rectangle, and how big it should be.
 
 ```js
 c.fillRect(120, 300, 900, 10)
 ```
 
-I could write a paragraph about what ```fillRect()``` and all the numbers mean, but it probably more effective for you to find out for yourself.
+Spend some time changing these numbers, setting ```c.fillStyle``` to different values, deleting, and duplicating lines.
 
-Spend some time changing the numbers, deleting, and adding lines and watch what happens in the browser window (it should refresh automatically each time you save a file).
+When you've developed a feeling for how ```fillRect()``` and ```fillStyle``` work, use them make a drawing of what you see out of your window.
 
-When you feel comfortable, make a drawing of an object in your room.
+If you're interested in drawing different kinds of shapes, take a look at [this article on the Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes). The [page on ```fillRect```](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect) might also be useful. MDN is generally a good place to look things up, and looking things up is generally an important part of programming.
 
-### Looking things up
-As you start experimenting, you'll probably start to have questions: How do I draw an outlined shape? How do I draw a circle? How do I draw a line?
+## Record your changes to the repository
 
-While I'm of course happy to help out, I would encourage you look for answers yourself. This isn't because I'm lazy (although I am), but because finding and reading technical documentation are central skills in programming.
+Once you're happy with your program, you're ready to upload your contribution to the workshop repository.
 
-For Javascript, [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/) is one of the best places to look things up. The [entry about fillRect()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect), a method you're already familar with, might be a good place to start.
+To do this, we're going to create a *commit* in git. A commit is a set of file changes you've made, along with a message that sums up what you did. As you work on a project, your commit messages form a record of what you did at which point.
 
-[Stackoverflow](https://stackoverflow.com/) also has good answers to many specific questions, although they're often just a code snippet with little explanation.
-
-## Commit your changes
-
-
+To create a new commit, we need to run a series of commands on the command line. Before you start, make sure you've stopped the development server by pressing ```Ctrl+C```.
 
 ```bash
 git status
 ```
+This will list all the files you've changed since you downloaded the repository. It should only display one file: the copy of ```max.html``` we made earlier. 
 
 ```bash
-git add exercises/chapter-1/[your file]
+git add .
 ```
 
+This will add all changed files from the list to the new commit. To verify this worked, you can run ```git status``` again. Your file should now be listed under *Changes to be committed*.
+
+
 ```bash
-git commit -m "Some message"
+git commit -m "[Describe the changes you made]"
 ```
+
+This will generate a new commit containing the files we added in the previous step, and associate it with a message. For this exercise, a short message like *Added drawing* is enough.
 
 ```bash
 git push
 ```
 
+This will upload (or *push*) the commit we just created to the Github repository. In some cases, you will be asked to enter your Github username and password here.
+
+You can verify everything worked correctly by looking at the [repository page on Github](https://github.com/awesomephant/ucw-exercises). After a few minutes, your drawing should also be [available on the workshop page](https://www.maxkoehler.com/ucw-exercises/exercises/).
+
+
 ## Further Reading
 
 - [Drawing shapes with canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) on MDN
+- [Chapter 2.2](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) from *Pro Git* has a more thorough explanation of recording changes to a git repository.
