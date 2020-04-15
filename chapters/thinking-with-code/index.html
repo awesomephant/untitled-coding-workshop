@@ -17,7 +17,7 @@
 <article class="article">
     <header class="article--header">
         
-            <img src="/untitled-coding-workshop/assets/layout.png" alt>
+            <img src="/untitled-coding-workshop/assets/window.png" alt>
         
         <h1 class="article--title">Hello World</h1>
         
@@ -28,12 +28,12 @@
         <div data-percentage="0" class="todo"><div class="progress"><div class="progress-inner"></div></div>
 <h2>Things to do</h2>
 <ul>
-<li><a href="#get-the-work%C2%ADshop-repos%C2%ADi%C2%ADtory">Get the work­shop repos­i­tory</a></li>
-<li><a href="#draw-an-ob%C2%ADject-in-your-room">Draw an ob­ject in your room</a></li>
-<li><a href="#commit-your-changes">Commit your changes</a></li>
+<li><a href="#set-up-the-work%C2%ADshop-repos%C2%ADi%C2%ADtory">Set up the work­shop repos­i­tory</a></li>
+<li><a href="#draw-what-you-see-out-of-your-win%C2%ADdow">Draw what you see out of your win­dow</a></li>
+<li><a href="#record-your-changes-to-the-repos%C2%ADi%C2%ADtory">Record your changes to the repos­i­tory</a></li>
 </ul>
 </div>
-<p>In the pre­vi­ous chap­ter, we in­stalled a se­ries of tools that make up a pro­fes­sional pro­gram­ming work­ﬂow. Now, we’re go­ing to use these tools to write, test, and pub­lish a short draw­ing pro­gram.</p>
+<p>In this chap­ter, we’re go­ing to use the tools we in­stalled pre­vi­ously to write a pro­gram, run it through a build process, and up­load it to ver­sion con­trol.</p>
 <h2>Set up the work­shop repos­i­tory</h2>
 <p>I’ve cre­ated a git repos­i­tory where we’ll keep all of our work at <a href="https://github.com/awesomephant/ucw-exercises">github.com/​awe­somephant/​ucw-ex­er­cises</a>. To con­tribute, you need to cre­ate a copy (or <em>clone</em>) of the re­spoitory on your com­puter.</p>
 <h3>Clone the repos­i­tory</h3>
@@ -62,8 +62,8 @@
 <figure><img loading="lazy" src="/untitled-coding-workshop//assets/layout.png"><figcaption></figcaption></figure>
 <p>There are a few things go­ing on in this ﬁle, but for now we’ll fo­cus on the part be­tween <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code>. What you’re look­ing at here is a Javascript pro­gram that draws a sim­ple im­age to the screen:</p>
 <p>Each line in this pro­gram is a com­mand, not un­like the com­mands we’ve been en­ter­ing on the com­mand line. The com­puter starts at the top of the pro­gram and ex­e­cutes one com­mand af­ter the other un­til it reaches the end.</p>
-<p>The ﬁrst four lines set up a num­ber of dif­fer­ent <em>vari­ables</em>. We’ll deal with vari­ables in de­tail later, but for now it’s enough to un­der­stand that we’re deﬁn­ing a two-di­men­sional draw­ing area slightly smaller than our browser win­dow, and call­ing it <code>c</code>.</p>
-<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#world'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">const</span> c <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span></code></pre>
+<p>The ﬁrst four lines set up a num­ber of dif­fer­ent <em>vari­ables</em>. We’ll deal with vari­ables in de­tail later, but for now it’s enough to un­der­stand that we’re deﬁn­ing a two-di­men­sional draw­ing area slightly smaller than our browser win­dow, and stor­ing it in a vari­able called <code>c</code>.</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">let</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#world'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">let</span> c <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span></code></pre>
 <p>Then, we’re deﬁn­ing a ﬁll colour that should ap­ply to <code>c</code>.</p>
 <pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">'rgb(36,40,91)'</span></span></code></pre>
 <p>Finally, we’re us­ing a func­tion called <code>fillRect()</code> to draw rec­tan­gles onto <code>c</code>. The four num­bers in­side the brack­ets are called <em>pa­ra­me­ters</em> and tell <code>fillRect()</code> where we want our rec­tan­gle, and how big it should be.</p>
@@ -86,8 +86,8 @@
 <p>You can ver­ify every­thing worked cor­rectly by look­ing at the <a href="https://github.com/awesomephant/ucw-exercises">repos­i­tory page on Github</a>. After a few min­utes, your draw­ing should also be <a href="https://www.maxkoehler.com/ucw-exercises/exercises/">avail­able on the work­shop page</a>.</p>
 <h2>Further Reading</h2>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes with can­vas</a> on <span class="small-caps">MDN</span></li>
-<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">Chapter 2.2</a> from <em>Pro Git</em> has a more thor­ough ex­pla­na­tion of record­ing changes to a git repos­i­tory.</li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">Chapter 2.2</a> from <em>Pro Git</em> gives a more thor­ough ex­pla­na­tion of record­ing changes to a git repos­i­tory.</li>
+<li>The in-progress book <a href="https://www.programmingdesignsystems.com/"><em>Programming Design Systems</em></a> by Rune Madsen is fan­tas­tic. Maybe start with the <a href="https://www.programmingdesignsystems.com/color/color-models-and-color-spaces/index.html#color-models-and-color-spaces-JDQ1fRD">chap­ter on colour</a>.</li>
 </ul>
 
     </main>
