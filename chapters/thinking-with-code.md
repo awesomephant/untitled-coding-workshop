@@ -31,7 +31,7 @@ git clone https://github.com/awesomephant/ucw-exercises
 ``` 
 Note that the second argument – the location of the repository we want to clone – is the same as the URL of the repository page on Github.
 
-When the command is finished, it should have created a new folder called ```ucw-exercises```. You can verify this by running ```ls```, or looking for it Finder.
+When the command is finished, it should have created a new folder called ```ucw-exercises```. You can verify this by running ```ls```, or looking for it in Finder.
 
 ### Set up the build process
 
@@ -60,7 +60,7 @@ If you see a page with a welcome message, you're good to move on.
 You can stop the server (or any other command line program) by hitting ```Ctrl+C```.
 
 ### Open the workshop folder in VSCode
-Open VSCode, and open the workshop folder using the command palette (```Cmd+Shift+P```). You should see a whole list of files and folder on the left, and an empty pane on the right.
+Open VSCode, and open the workshop folder using the command palette (```Cmd+Shift+P```). You should see a whole list of files and folder on the left, and an empty panel on the right.
 
 Feel free to look at some of the files in the folder. You'll recognise that ```index.html``` inside the ```exercises``` folder is the welcome page we saw in the previous step.
 
