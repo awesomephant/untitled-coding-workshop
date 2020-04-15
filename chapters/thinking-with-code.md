@@ -5,18 +5,18 @@ supTitle: "Chapter 2"
 title: "Hello World"
 intro: "Getting the workshop repository, drawing basic shapes, comitting your changes."
 date: 2019-01-03
-thumbnail: /assets/layout.png
+thumbnail: /assets/window.png
 ---
 
 {% todo %}
 
 ## Things to do
-- [Get the workshop repository](#get-the-work­shop-repos­i­tory)
-- [Draw an object in your room](#draw-an-ob­ject-in-your-room)
-- [Commit your changes](#commit-your-changes)
+- [Set up the workshop repository](#set-up-the-work­shop-repos­i­tory)
+- [Draw what you see out of your win­dow](#draw-what-you-see-out-of-your-win­dow)
+- [Record your changes to the repos­i­tory](#record-your-changes-to-the-repos­i­tory)
 {% endtodo %}
 
-In the previous chapter, we installed a series of tools that make up a professional programming workflow. Now, we're going to use these tools to write, test, and publish a short drawing program.
+In this chapter, we're going to use the tools we installed previously to write a program, run it through a build process, and upload it to version control.
 
 ## Set up the workshop repository
 
@@ -75,11 +75,11 @@ There are a few things going on in this file, but for now we'll focus on the par
 
 Each line in this program is a command, not unlike the commands we've been entering on the command line. The computer starts at the top of the program and executes one command after the other until it reaches the end. 
 
-The first four lines set up a number of different *variables*. We'll deal with variables in detail later, but for now it's enough to understand that we're defining a two-dimensional drawing area slightly smaller than our browser window, and calling it ```c```.
+The first four lines set up a number of different *variables*. We'll deal with variables in detail later, but for now it's enough to understand that we're defining a two-dimensional drawing area slightly smaller than our browser window, and storing it in a variable called ```c```.
 
 ```js
-const el = document.querySelector('#world')
-const c = el.getContext('2d')
+let el = document.querySelector('#world')
+let c = el.getContext('2d')
 c.canvas.width = window.innerWidth - 100;
 c.canvas.height = window.innerHeight - 100;
 ```
@@ -139,5 +139,5 @@ You can verify everything worked correctly by looking at the [repository page on
 
 ## Further Reading
 
-- [Drawing shapes with canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) on MDN
-- [Chapter 2.2](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) from *Pro Git* has a more thorough explanation of recording changes to a git repository.
+- [Chapter 2.2](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) from *Pro Git* gives a more thorough explanation of recording changes to a git repository.
+- The in-progress book [*Programming Design Systems*](https://www.programmingdesignsystems.com/) by Rune Madsen is fantastic. Maybe start with the [chapter on colour](https://www.programmingdesignsystems.com/color/color-models-and-color-spaces/index.html#color-models-and-color-spaces-JDQ1fRD).
