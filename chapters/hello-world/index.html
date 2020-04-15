@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Untitled Coding Workshop</title>
+    <link rel="stylesheet" href=" /untitled-coding-workshop/css/main.css">
+    <link rel="stylesheet" href=" /untitled-coding-workshop/css/syntax.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jfg7jkq.css">
+</head>
+<body>
+    <header class="site--header">
+        <h1><a class="site--title" href="/untitled-coding-workshop/">Untitled Coding Workshop</a></h1>
+    </header>
+    
+<article class="article">
+    <header class="article--header">
+        
+            <img src="/untitled-coding-workshop/assets/window.png" alt>
+        
+        <h1 class="article--title">Hello World</h1>
+        
+        <p class="article--intro">Getting the workshop repository, drawing basic shapes, comitting your changes.</p>
+        
+    </header>
+    <main class="article--body">
+        <div data-percentage="0" class="todo"><div class="progress"><div class="progress-inner"></div></div>
+<h2>Things to do</h2>
+<ul>
+<li><a href="#set-up-the-work%C2%ADshop-repos%C2%ADi%C2%ADtory">Set up the work­shop repos­i­tory</a></li>
+<li><a href="#draw-what-you-see-out-of-your-win%C2%ADdow">Draw what you see out of your win­dow</a></li>
+<li><a href="#record-your-changes-to-the-repos%C2%ADi%C2%ADtory">Record your changes to the repos­i­tory</a></li>
+</ul>
+</div>
+<p>In this chap­ter, we’re go­ing to use the tools we in­stalled pre­vi­ously to write a pro­gram, run it through a build process, and up­load it to ver­sion con­trol.</p>
+<h2>Set up the work­shop repos­i­tory</h2>
+<p>I’ve cre­ated a git repos­i­tory where we’ll keep all of our work at <a href="https://github.com/awesomephant/ucw-exercises">github.com/​awe­somephant/​ucw-ex­er­cises</a>. To con­tribute, you need to cre­ate a copy (or <em>clone</em>) of the re­spoitory on your com­puter.</p>
+<h3>Clone the repos­i­tory</h3>
+<p>We’re go­ing to use git to down­load a copy (or <em>clone</em>) of the work­shop repos­i­tory. To do this, open the com­mand line and nav­i­gate to a place in your ﬁle sys­tem where you’d like to keep the work­shop folder. Then run the fol­low­ing com­mand:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> clone https://github.com/awesomephant/ucw-exercises</span></code></pre>
+<p>Note that the sec­ond ar­gu­ment&thinsp;&mdash;&thinsp;the lo­ca­tion of the repos­i­tory we want to clone&thinsp;&mdash;&thinsp;is the same as the <span class="small-caps">URL</span> of the repos­i­tory page on Github.</p>
+<p>When the com­mand is ﬁn­ished, it should have cre­ated a new folder called <code>ucw-exercises</code>. You can ver­ify this by run­ning <code>ls</code>, or look­ing for it in Finder.</p>
+<h3>Set up the build process</h3>
+<p>The build process for this pro­ject is sim­ple. All it does for now is watch the pro­ject ﬁles, and re­fresh the browser win­dow when­ever you make a change.</p>
+<p>I’ve al­ready set this up, so all you need to do is in­stall the nec­es­sary de­pen­den­cies. You do that by <code>cd</code>-ing into the pro­ject folder, and run­ning:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">npm</span> <span class="token function">install</span></span></code></pre>
+<p>If the com­mand ﬁn­ishes with­out er­rors, you’re good to move on.</p>
+<p>Note that you only need to in­stall the de­pen­den­cies the ﬁrst time you start work­ing on a new pro­ject. Whenever you come come back to it, you can go straight to the fol­low­ing step.</p>
+<h3>Start the de­vel­op­ment server</h3>
+<p>While in the pro­ject folder, run the fol­low­ing to start the build process:</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">npm</span> run start</span></code></pre>
+<p>This will start a tiny web­server on your com­puter that only you can see. It has this spe­cial <span class="small-caps">URL</span>: <a href="http://localhost:3000">http://​lo­cal­host:3000</a>. This should open in your browser au­to­mat­i­cally. If not, copy it into the ad­dress bar man­u­ally.</p>
+<p>If you see a page with a wel­come mes­sage, you’re good to move on.</p>
+<p>You can stop the server (or any other com­mand line pro­gram) by hit­ting <code>Ctrl+C</code>.</p>
+<h3>Open the work­shop folder in VSCode</h3>
+<p>Open VSCode, and open the work­shop folder us­ing the com­mand palette (<code>Cmd+Shift+P</code>). You should see a whole list of ﬁles and folder on the left, and an empty panel on the right.</p>
+<p>Feel free to look at some of the ﬁles in the folder. You’ll recog­nise that <code>index.html</code> in­side the <code>exercises</code> folder is the wel­come page we saw in the pre­vi­ous step.</p>
+<h2>Draw what you see out of your win­dow</h2>
+<p>Under <code>exercises/chapter-1</code>, you’ll ﬁnd a ﬁle called <code>max.html</code>. Make a copy of it, and give the copy a dif­fer­ent name. This is the ﬁle where you’ll be do­ing your cod­ing.</p>
+<p>Open it in your browser by go­ing to <code>http://localhost:3000/chapter-1/[Your filename here]</code>. When I work on web­sites, I like to have VSCode and the browser open at the same time, like this:</p>
+<figure><img loading="lazy" src="/untitled-coding-workshop//assets/layout.png"><figcaption></figcaption></figure>
+<p>There are a few things go­ing on in this ﬁle, but for now we’ll fo­cus on the part be­tween <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code>. What you’re look­ing at here is a Javascript pro­gram that draws a sim­ple im­age to the screen:</p>
+<p>Each line in this pro­gram is a com­mand, not un­like the com­mands we’ve been en­ter­ing on the com­mand line. The com­puter starts at the top of the pro­gram and ex­e­cutes one com­mand af­ter the other un­til it reaches the end.</p>
+<p>The ﬁrst four lines set up a num­ber of dif­fer­ent <em>vari­ables</em>. We’ll deal with vari­ables in de­tail later, but for now it’s enough to un­der­stand that we’re deﬁn­ing a two-di­men­sional draw­ing area slightly smaller than our browser win­dow, and stor­ing it in a vari­able called <code>c</code>.</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line"><span class="token keyword">let</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#world'</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">let</span> c <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span><br><span class="highlight-line">c<span class="token punctuation">.</span>canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> window<span class="token punctuation">.</span>innerHeight <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">;</span></span></code></pre>
+<p>Then, we’re deﬁn­ing a ﬁll colour that should ap­ply to <code>c</code>.</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">'rgb(36,40,91)'</span></span></code></pre>
+<p>Finally, we’re us­ing a func­tion called <code>fillRect()</code> to draw rec­tan­gles onto <code>c</code>. The four num­bers in­side the brack­ets are called <em>pa­ra­me­ters</em> and tell <code>fillRect()</code> where we want our rec­tan­gle, and how big it should be.</p>
+<pre class="language-js"><code class="language-js"><span class="highlight-line">c<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">900</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></span></code></pre>
+<p>Spend some time chang­ing these num­bers, set­ting <code>c.fillStyle</code> to dif­fer­ent val­ues, delet­ing, and du­pli­cat­ing lines.</p>
+<p>When you’ve de­vel­oped a feel­ing for how <code>fillRect()</code> and <code>fillStyle</code> work, use them make a draw­ing of what you see out of your win­dow.</p>
+<p>If you’re in­ter­ested in draw­ing dif­fer­ent kinds of shapes, take a look at <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">this ar­ti­cle on the Mozilla Developer Network</a>. The <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect">page on <code>fillRect</code></a> might also be use­ful. <span class="small-caps">MDN</span> is gen­er­ally a good place to look things up, and look­ing things up is gen­er­ally an im­por­tant part of pro­gram­ming.</p>
+<h2>Record your changes to the repos­i­tory</h2>
+<p>Once you’re happy with your pro­gram, you’re ready to up­load your con­tri­bu­tion to the work­shop repos­i­tory.</p>
+<p>To do this, we’re go­ing to cre­ate a <em>com­mit</em> in git. A com­mit is a set of ﬁle changes you’ve made, along with a mes­sage that sums up what you did. As you work on a pro­ject, your com­mit mes­sages form a record of what you did at which point.</p>
+<p>To cre­ate a new com­mit, we need to run a se­ries of com­mands on the com­mand line. Before you start, make sure you’ve stopped the de­vel­op­ment server by press­ing <code>Ctrl+C</code>.</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> status</span></code></pre>
+<p>This will list all the ﬁles you’ve changed since you down­loaded the repos­i­tory. It should only dis­play one ﬁle: the copy of <code>max.html</code> we made ear­lier.</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span></span></code></pre>
+<p>This will add all changed ﬁles from the list to the new com­mit. To ver­ify this worked, you can run <code>git status</code> again. Your ﬁle should now be listed un­der <em>Changes to be com­mit­ted</em>.</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> commit -m <span class="token string">"[Describe the changes you made]"</span></span></code></pre>
+<p>This will gen­er­ate a new com­mit con­tain­ing the ﬁles we added in the pre­vi­ous step, and as­so­ci­ate it with a mes­sage. For this ex­er­cise, a short mes­sage like <em>Added draw­ing</em> is enough.</p>
+<pre class="language-bash"><code class="language-bash"><span class="highlight-line"><span class="token function">git</span> push</span></code></pre>
+<p>This will up­load (or <em>push</em>) the com­mit we just cre­ated to the Github repos­i­tory. In some cases, you will be asked to en­ter your Github user­name and pass­word here.</p>
+<p>You can ver­ify every­thing worked cor­rectly by look­ing at the <a href="https://github.com/awesomephant/ucw-exercises">repos­i­tory page on Github</a>. After a few min­utes, your draw­ing should also be <a href="https://www.maxkoehler.com/ucw-exercises/exercises/">avail­able on the work­shop page</a>.</p>
+<h2>Further Reading</h2>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">Chapter 2.2</a> from <em>Pro Git</em> gives a more thor­ough ex­pla­na­tion of record­ing changes to a git repos­i­tory.</li>
+<li>The in-progress book <a href="https://www.programmingdesignsystems.com/"><em>Programming Design Systems</em></a> by Rune Madsen is fan­tas­tic. Maybe start with the <a href="https://www.programmingdesignsystems.com/color/color-models-and-color-spaces/index.html#color-models-and-color-spaces-JDQ1fRD">chap­ter on colour</a>.</li>
+</ul>
+
+    </main>
+
+</article>
+    <script src="/untitled-coding-workshop/js/site.js"></script>
+</body>
+</html>
