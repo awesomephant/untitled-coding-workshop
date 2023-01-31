@@ -43,7 +43,7 @@ The set of tools we're using for this workshop is pretty close to what I use for
 The goal for this week is to get all of these things installed on your machine, and to write, build, test, and upload a small program to verify that everything is working correctly.
 
 
-## Visual Studio
+## Visual Studio Code
 
 Visual Studio Code is an open-source code editor developed by Microsoft. Note that this is different from Visual Studio (without the *Code*). If you already have a different editor, that's okay too.
 
@@ -69,7 +69,7 @@ On a Mac, you open the command line by starting the Terminal app from your dock.
 - Run ```ls``` again. Now, you should see a list of everything inside the folder ```cd```'d into in the previous step.
 - Go back up to the parent folder by running  ```cd..``` 
 
-Spend a few minutes ```cd```-ing and ```ls```-ing around your file system. You can speed things up by typing only the first few letters of a filename and hitting the ```Tab``` key, which will complete the name automatically.
+Spend a few minutes ```cd```-ing and ```ls```-ing around your file system. You can speed things up by typing only the first few letters of a filename and hitting the ```Tab``` key, which will autocomplete whatever you're typing at the moment.
 
 If you're comfortable opening the command line and moving around your file system, you're ready to move on.
 

@@ -75,13 +75,13 @@ There are a few things going on in this file, but for now we'll focus on the par
 
 Each line in this program is a command, not unlike the commands we've been entering on the command line. The computer starts at the top of the program and executes one command after the other until it reaches the end. 
 
-The first four lines set up a number of different *variables*. We'll deal with variables in detail later, but for now it's enough to understand that we're defining a two-dimensional drawing area slightly smaller than our browser window, and storing it in a variable called ```c```.
+The first four lines set up a number of different *variables*. We'll deal with variables in detail later, but for now it's enough to understand that we're defining a two-dimensional drawing area 1000 pixels square and storing it in a variable called ```c```.
 
 ```js
 let el = document.querySelector('#world')
 let c = el.getContext('2d')
-c.canvas.width = window.innerWidth - 100;
-c.canvas.height = window.innerHeight - 100;
+c.canvas.width  = 1000;
+c.canvas.height = 1000;
 ```
 
 Then, we're defining a fill colour that should apply to ```c```.
