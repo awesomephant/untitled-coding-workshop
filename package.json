@@ -5,16 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "predeploy": "npx @11ty/eleventy",
-    "deploy": "gh-pages -d _site"
+    "build": "npx @11ty/eleventy"
   },
   "author": "Max Kohler",
   "license": "ISC",
-  "homepage": "/untitled-coding-workshop",
+  "homepage": "ucw.maxkohler.com",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "*",
-    "gh-pages": "^5.0.0"
+    "@11ty/eleventy-plugin-syntaxhighlight": "*"
   }
 }

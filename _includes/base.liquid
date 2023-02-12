@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
     <link rel="stylesheet" href=" {{'/css/syntax.css' | url}}">
     <link rel="stylesheet" href="https://use.typekit.net/jfg7jkq.css">
 </head>
+
 <body>
     <header class="site--header">
         <h1><a class='site--title' href="{{'/' | url}}">Untitled Coding Workshop</h1></a>
     </header>
-    {{ content | safe }}
+    {{ content }}
     <script src="{{'/js/site.js' | url}}"></script>
 </body>
+
 </html>
