@@ -126,7 +126,7 @@ This will add all changed files from the list to the new commit. To verify this 
 git commit -m "[Describe the changes you made]"
 ```
 
-This will generate a new commit containing the files we added in the previous step, and associate it with a message. For this exercise, a short message like *Added drawing* is enough.
+This will generate a new commit containing the files we added in the previous step, and associate it with a message. For this exercise, a short message like *Add drawing* is enough.
 
 ```bash
 git push
