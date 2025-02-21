@@ -134,7 +134,7 @@ git push
 
 This will upload (or *push*) the commit we just created to the Github repository. In some cases, you will be asked to enter your Github username and password here.
 
-You can verify everything worked correctly by looking at the [repository page on Github](https://github.com/awesomephant/ucw-exercises). After a few minutes, your drawing should also be [available on the workshop page](https://www.maxkoehler.com/ucw-exercises/exercises/).
+You can verify everything worked correctly by looking at the [repository page on Github](https://github.com/awesomephant/ucw-exercises). After a few minutes, your drawing should also be [available on the workshop page](https://www.maxkohler.com/ucw-exercises/exercises/).
 
 
 ## Further Reading
