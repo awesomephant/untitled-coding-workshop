@@ -20,7 +20,7 @@ In this chapter, we're going to use the tools we installed previously to write a
 
 ## Set up the workshop repository
 
-I've created a git repository where we'll keep all of our work at [github.com/awesomephant/ucw-exercises](https://github.com/awesomephant/ucw-exercises). To contribute, you need to create a copy (or *clone*) of the respoitory on your computer.
+I've created a git repository where we'll keep all of our work at [github.com/awesomephant/ucw-exercises](https://github.com/awesomephant/ucw-exercises). To contribute, you need to create a copy (or *clone*) of the repository on your computer.
 
 ### Clone the repository
 
